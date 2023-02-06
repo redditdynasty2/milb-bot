@@ -1,3 +1,4 @@
+#TODO properly cleanup configparser change
 import configparser as ConfigParser
 import io
 import praw
@@ -28,7 +29,8 @@ if __name__ == "__main__":
     reddit_secret = config.get("reddit", "reddit_secret")
     reddit_post = config.get("reddit", "reddit_post")
     slack_webhook = config.items("slack")
-    reddit = praw.Reddit(
+#TODO user agent should move to config file too to be more generic
+reddit = praw.Reddit(
             user_agent="rd2 milb bot", 
             client_id=reddit_id, client_secret=reddit_secret)
 
