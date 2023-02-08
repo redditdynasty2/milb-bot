@@ -30,7 +30,7 @@ if __name__ == "__main__":
     reddit_post = config.get("reddit", "reddit_post")
     slack_webhook = config.items("slack")
 #TODO user agent should move to config file too to be more generic
-reddit = praw.Reddit(
+    reddit = praw.Reddit(
             user_agent="rd2 milb bot", 
             client_id=reddit_id, client_secret=reddit_secret)
 
